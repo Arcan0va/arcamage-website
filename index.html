@@ -2,63 +2,47 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>ArcaMage</title>
+  <title>ArcaMage - Accueil</title>
   <style>
-    /* Reset minimal */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #6b5b95, #feb236);
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-height:100vh;
+      text-align:center;
     }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      margin: 0 15px;
+      font-weight:bold;
+      transition: 0.3s;
+    }
+    nav a:hover { text-decoration: underline; }
+    h1 { font-size:3em; margin-bottom:20px; animation:pulse 2s infinite; }
+    p { font-size:1.5em; animation:float 3s infinite ease-in-out; }
+    .construction { margin-top:30px; font-size:2em; animation:blink 1s infinite; }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      animation: pulse 2s infinite;
-    }
-
-    p {
-      font-size: 1.5em;
-      animation: float 3s infinite ease-in-out;
-    }
-
-    /* Animations */
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .construction {
-      margin-top: 30px;
-      font-size: 2em;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
+    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <h1>Bienvenue sur ArcaMage !</h1>
   <p>Site en construction 👷‍♂️✨</p>
-  <div class="construction">🔨 En cours de création, fin vers début avril...</div>
+  <div class="construction">🔨 En cours de création...</div>
 </body>
 </html>
-<a href="about.html">À propos</a>
-<a href="contact.html">Contact</a>
