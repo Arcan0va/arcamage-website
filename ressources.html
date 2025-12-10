@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ArcaMage - Ressources</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #feb236, #6b5b95);
+      color: #fff;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-height:100vh;
+      text-align:center;
+      padding: 20px;
+    }
+    nav { margin: 20px 0; }
+    nav a { color:#fff; text-decoration:none; margin: 0 15px; font-weight:bold; transition:0.3s; }
+    nav a:hover { text-decoration: underline; }
+    h1 { font-size:3em; margin-bottom:20px; animation:pulse 2s infinite; }
+    ul { list-style: none; margin-top: 20px; }
+    li { margin: 10px 0; font-size:1.2em; }
+    a.resource-link { color: #ffd700; text-decoration: none; transition: 0.3s; }
+    a.resource-link:hover { text-decoration: underline; }
+
+    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <a href="resources.html">Ressources</a>
+  </nav>
+  
+  <h1>Ressources</h1>
+  <p>Voici quelques ressources utiles pour ArcaMage et ses projets :</p>
+  
+  <ul>
+    <li><a href="#" class="resource-link">Sprites et assets gratuits</a></li>
+    <li><a href="#" class="resource-link">Tutoriels HTML/CSS/JS</a></li>
+    <li><a href="#" class="resource-link">Bibliothèques graphiques</a></li>
+    <li><a href="#" class="resource-link">Outils de création pixel art</a></li>
+  </ul>
+</body>
+</html>
