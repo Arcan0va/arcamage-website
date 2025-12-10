@@ -4,3 +4,5 @@ if you want to check the site, [click here](https://arcan0va.github.io/arcamage-
 
 <p style="color: red;">Texte rouge</p>
 <p style="color: #00ff00;">Texte vert flashy</p>
+![Rouge](https://img.shields.io/badge/Texte-Rouge-red)
+![Vert](https://img.shields.io/badge/Texte-Vert-brightgreen)
