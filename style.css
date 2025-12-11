@@ -183,3 +183,51 @@ input:focus {
 .show-password [id=beam] {
   background: var(--beamColor);
 }
+/* ========== EYE BEAM EFFECT ========== */
+
+.password-box {
+  position: relative;
+}
+
+#eyeball {
+  position: absolute;
+  top: 14px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* Light beam */
+#beam {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  width: 180px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.35);
+  filter: blur(20px);
+  border-radius: 50px;
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+/* When activated */
+.eye-active #beam {
+  transform: translateY(-50%) scaleX(1);
+}
