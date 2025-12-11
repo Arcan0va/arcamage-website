@@ -3,47 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>ArcaMage - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Reset CSS + ton style fancy -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #6b5b95, #feb236);
-      color: #fff;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      min-height:100vh;
-      text-align:center;
-    }
+    /* STYLE SPÉCIFIQUE À ARCAMAGE POUR LE TITRE + NAV */
     nav {
-      margin: 20px 0;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     nav a {
-      color:#fff;
-      text-decoration:none;
+      color: var(--inputColor);
+      text-decoration: none;
       margin: 0 15px;
-      font-weight:bold;
-      transition: 0.3s;
+      font-weight: bold;
+      font-size: 1.3rem;
     }
-    nav a:hover { text-decoration: underline; }
-    h1 { font-size:3em; margin-bottom:20px; animation:pulse 2s infinite; }
-    p { font-size:1.5em; animation:float 3s infinite ease-in-out; }
-    .construction { margin-top:30px; font-size:2em; animation:blink 1s infinite; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1);} }
-    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
-    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--inputColor);
+      text-align: center;
+    }
+
+    p {
+      color: var(--inputColor);
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .spacer-big {
+      height: 2rem;
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Navigation ArcaMage -->
   <nav>
     <a href="index.html">Accueil</a>
     <a href="about.html">À propos</a>
     <a href="contact.html">Contact</a>
     <a href="resources.html">Ressources</a>
   </nav>
-  <h1>Bienvenue sur ArcaMage !</h1>
-  <p>Site en construction 👷‍♂️✨</p>
-  <div class="construction">🔨 En cours de création...</div>
-</body>
-</html>
