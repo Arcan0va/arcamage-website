@@ -1,16 +1,22 @@
-const password = document.getElementById("pass");
-const eyeBtn = document.getElementById("eyeball");
+const pass = document.getElementById("pass");
+const btn = document.getElementById("eyeball");
 const beam = document.getElementById("beam");
 
-eyeBtn.addEventListener("click", () => {
-  const isPassword = password.type === "password";
+let shown = false;
 
-  password.type = isPassword ? "text" : "password";
+btn.addEventListener("click", () => {
+  shown = !shown;
 
-  // Toggle beam animation
-  if (isPassword) {
-    beam.parentElement.classList.add("eye-active");
+  // Toggle password
+  pass.type = shown ? "text" : "password";
+
+  // Beam effect
+  if (shown) {
+    beam.style.opacity = "1";
+    beam.style.width = "120px";
+    beam.style.transform = "translateY(-50%) rotate(-10deg)";
   } else {
-    beam.parentElement.classList.remove("eye-active");
+    beam.style.opacity = "0";
+    beam.style.width = "0px";
   }
 });
