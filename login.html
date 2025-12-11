@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Modern Login + Eye Beam</title>
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&display=swap'>
+  <title>Modern Login + Beam Eye</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -22,17 +22,15 @@
     </div>
 
     <!-- PASSWORD BOX WITH EYE + BEAM -->
-    <div class="input_box password-box">
+    <div class="input_box" style="position:relative;">
       <input type="password" id="pass" class="input-field" required>
       <label for="pass" class="label">Password</label>
-      <i class="bx bx-lock-alt icon"></i>
 
-      <!-- Eye button -->
-      <button type="button" id="eyeball">
+      <!-- L'icône de l'œil -->
+      <button type="button" id="eyeball" class="eye-btn">
         <div class="eye"></div>
       </button>
 
-      <!-- Beam -->
       <div id="beam"></div>
     </div>
 
@@ -58,5 +56,6 @@
 </div>
 
 <script src="./script.js"></script>
+
 </body>
 </html>
