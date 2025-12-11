@@ -1,21 +1,16 @@
-const root = document.documentElement;
-const eye = document.getElementById('eyeball');
-const beam = document.getElementById('beam');
-const passwordInput = document.getElementById('password');
+const password = document.getElementById("pass");
+const eyeBtn = document.getElementById("eyeball");
+const beam = document.getElementById("beam");
 
-root.addEventListener('mousemove', (e) => {
-  let rect = beam.getBoundingClientRect();
-  let mouseX = rect.right + (rect.width / 2); 
-  let mouseY = rect.top + (rect.height / 2);
-  let rad = Math.atan2(mouseX - e.pageX, mouseY - e.pageY);
-  let degrees = (rad * (20 / Math.PI) * -1) - 350;
+eyeBtn.addEventListener("click", () => {
+  const isPassword = password.type === "password";
 
-  root.style.setProperty('--beamDegrees', `${degrees}deg`);
-});
+  password.type = isPassword ? "text" : "password";
 
-eye.addEventListener('click', e => {
-  e.preventDefault();
-  document.body.classList.toggle('show-password');
-  passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password'
-  passwordInput.focus();
+  // Toggle beam animation
+  if (isPassword) {
+    beam.parentElement.classList.add("eye-active");
+  } else {
+    beam.parentElement.classList.remove("eye-active");
+  }
 });
